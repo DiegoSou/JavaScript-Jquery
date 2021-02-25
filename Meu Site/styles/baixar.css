@@ -1,0 +1,24 @@
+#baixarCodigo{
+    position: fixed;
+    right: 0;
+    bottom: 186px;
+    margin-top: 242px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px 0px 0px;
+    padding: 8px;
+
+    background-color: #ffb700;
+    box-shadow: -1px -1px 2px 0.3px #bd8d12ad;
+    border: solid 0.1px #815d00b9;
+    transition: all 1s;
+}
+
+#baixarCodigo:hover{
+    background-color: #1684a5a8;
+    box-shadow: -1px -1px 2px 0.3px #006786a8;
+    border: solid 0.3px #000000b9;
+    padding: 12px;
+    padding-right: 30px;
+}

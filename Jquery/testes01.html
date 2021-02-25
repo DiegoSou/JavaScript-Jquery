@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery1</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="jquery-3.5.1.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/104671ef8a.js" crossorigin="anonymous"></script>
+    <script src="testes01.js"></script>
+    <link rel="stylesheet" href="testes01.css">
+</head>
+
+<body>
+    <button type="button" id="btnFuncoes" class="botao"><i class="fas fa-arrow-circle-right"></i></button>
+    <div id="outraDiv" class="sumido">
+        <h2>Funções</h2>
+        <p>
+            <ul>
+                <li><a href="https://www.w3schools.com/jquery/html_hasclass.asp" target="_blank">hasClass()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/jquery_css.asp" target="_blank">css()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/html_removeclass.asp" target="_blank">removeClass()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/html_toggleclass.asp" target="_blank">toggleClass()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/jquery_hide_show.asp" target="_blank">hide()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/jquery_hide_show.asp" target="_blank">show()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/html_attr.asp" target="_blank">attr()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/html_text.asp" target="_blank">text()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/html_html.asp" target="_blank">html()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/html_val.asp" target="_blank">val()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/eff_toggle.asp" target="_blank">toggle()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/traversing_is.asp" target="_blank">is()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/event_bind.asp" target="_blank">bind()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/event_unbind.asp" target="_blank">unbind()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/eff_fadein.asp" target="_blank">fadeIn()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/eff_fadeout.asp" target="_blank">fadeOut()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/eff_slideup.asp" target="_blank">slideUp()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/html_remove.asp" target="_blank">remove()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/traversing_parent.asp" target="_blank">parent()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/traversing_children.asp" target="_blank">children()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/html_wrap.asp" target="_blank">wrap()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/html_replacewith.asp" target="_blank">replaceWith()</a></li>
+                <li><a href="https://www.w3schools.com/jquery/html_clone.asp" target="_blank">clone()</a></li>
+            </ul>
+        </p>
+    </div>
+
+
+    <h1>Utilizando o Jquery</h1>
+    <div id="divPai">
+        <div id="divMain">
+            <h2>O que é Jquery?</h2>
+            <p>Jquery é uma 'biblioteca de JavaScript muito utilizada para fazer as mesmas coisas do JS, porém de uma fora mais prática e reduzida.
+                Ela possui duas versões, a compactada, utilizada após o upload do site pelo seu tamanho reduzido, e a descompactada, utilizada durante o desenvolvimento do site por proporcionar
+                a leitura feita pelo programador, porém é uma versão mais pesada.</p>
+            <h2>Árvore DOM</h2>
+            <p>A árvore DOM nada mais é do que a forma hierárquica com que seu site é representado, divisão de tags e a interpretação do código. Essa forma de ver o código é utilizada para entender e até mesmo manipular os elementos com o JavaScript/Jquery.</p>
+            <h3>Seletores</h3>
+            <p>Para manipular esses elementos DOM nós utilizamos o operador $(seletor), se quisessemos o id do elemento p: $(#paragrafo); ou acessar todos os elementos de uma classe chamada paragrafos: $(.paragrafos)</p>
+            <p>Exeplos: $("p") || $(".destaque"); || $("#menu"); || $("#menu a"); || $("#header div p span")</p>
+            <h2>Algumas Propriedades</h2>
+            <p>Togle Class:
+                <input type="button" id="btn1" class="botao" value="Aparecer">
+                <input type="button" id="btn2" class="botao" value="Copiar">
+            </p>
+
+            <p id="textoSumido1" class="sumido">Lorem, ipsum dolori sit amet consectetur adipisicing elit. Doloribus, consectetur? Architecto facilis quos tempora amet est laudantium cum ratione dolor. Temporibus aliquid deleniti odit maiores animi sint eius modi quaerat.</p>
+            <p id="textoSumido2" class="sumido">Cupcake ipsum dolori sit amet candy canes. Carrot cake tart soufflé donut cake chupa chups. Pie sweet I love pastry danish halvah cupcake.
+                Ice cream fruitcake tiramisu I love. Jujubes sesame snaps chocolate cake. Lemon drops I love ice cream.
+                Jujubes tootsie roll halvah powder wafer. Tiramisu I love powder liquorice brownie dessert pudding. I love sweet dragée wafer ice cream fruitcake I love muffin cupcake.
+            </p>
+
+            <label>
+                <input type="radio" name="opcao">
+                A
+            </label>
+
+            <label>
+                <input type="radio" name="opcao">
+                B
+            </label>
+
+            <h2>Selecione uma Imagem</h2>
+            <div class="flex">
+                <div>
+                    <div>
+                        <input type="image" src="animais/cobra.jpg" alt="Cobra" class="animais">
+                        <input type="image" src="animais/macaco.jpg" alt="Macaco" class="animais">
+                        <input type="image" src="animais/galinha.jpg" alt="Galinha" class="animais">
+                    </div>
+                    <div>
+                        <input type="image" src="animais/golfinho.jpg" alt="Golfinho" class="animais">
+                        <input type="image" src="animais/cachorro.jpg" alt="Cachorro" class="animais">
+                        <input type="image" src="animais/cavalo.jpg" alt="Cavalo" class="animais">
+                    </div>
+                </div>
+                <div id="textosAnimais">
+                    <p id="txtCobra">Animais de sangue frio, as serpentes são répteis pertencentes à ordem Squamata (animais que possuem escamas), sendo conhecidas popularmente como cobras. Deduz-se que as serpentes evoluíram a partir de lagartos que se enterravam no solo, e que o seu corpo alongado e desprovido de patas seria apenas uma adaptação a esse modo de vida.</p>
+                    <p id="txtMacaco">A ordem dos Primatas é um grupo de mamíferos que compreende os popularmente chamados de macacos, símios, lêmures e os seres humanos. É dividida informalmente em símios e prossímios.[2] Os primatas surgiram de ancestrais arborícolas nas florestas tropicais; muitas das características dessa ordem são adaptações a esse modo de vida. Entretanto, alguns primatas são parcialmente arborícolas.</p>
+                    <p id="txtGalinha">Galinhas (Gallus gallus) são aves domésticas pertencentes à Ordem Galliforme, Família Phasianidae. São animais de médio porte, variando de 400 gr a 6 kg, de acordo com a raça. São de origem asiática, porém foram introduzidas em todas as partes do mundo graças à domesticação. Como não há mais necessidade de fugir de predadores e o forrageio é feito no solo, as galinhas perderam a habilidade de voar.</p>
+                    <p id="txtGolfinho">Os golfinhos são animais mamíferos, pertencentes ao filo cordata e a ordem dos cetáceos. Vivem no meio aquático e se distribuem em quase todos os ambientes marinhos do planeta, com exceção dos pólos. No nosso país, os golfinhos mais comumente encontrados são: boto-cor-de-rosa, toninha, tucuxi, boto-cinza, golfinho-nariz-de-garrafa e golfinho-rotador.</p>
+                    <p id="txtCachorro">O cão (nome científico: Canis lupus familiaris), no Brasil também chamado de cachorro, é um mamífero carnívoro da família dos canídeos, subespécie do lobo, e talvez o mais antigo animal domesticado pelo ser humano. Teorias postulam que surgiu do lobo cinzento no continente asiático há mais de 100 000 anos.</p>
+                    <p id="txtCavalo">Segundo os estudos biológicos, o cavalo existe há cerca de 55 milhões de anos e tem no Eohippus um de seus mais antigos ancestrais. Por volta de três milhões de anos, a espécie Equus já apresentava cascos e teve a capacidade de se espalhar por diferentes partes do mundo. E assim, alguns milhares de anos, homem e cavalo se encontrariam para a realização de várias tarefas que envolveriam a agricultura, o transporte, a guerra e até mesmo o esporte.</p>
+                </div>
+            </div>
+
+            <h2>Digite um Parágrafo:</h2>
+            <input type="text" id="parCriado">
+            <input type="button" id="criarPar" class="botao" value="Criar Parágrafo">
+            <div id="armazemParagrafos"></div>
+        </div>
+    </div>
+
+   
+</body>
+</html>

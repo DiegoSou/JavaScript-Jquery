@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando JS</title>
+    
+    <link rel="shortcut icon" href="favicon (1).ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/baixar.css">
+    <link rel="stylesheet" href="./styles/horadodia.css">
+    <link rel="stylesheet" href="./styles/principal.css">
+    <link rel="stylesheet" href="./styles/apresentacao.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<body onload="DoDia()">
+    <div id="PaideTodos">
+        <header>
+            <h1>Javascript no Site</h1>
+        </header>
+        
+        <!-- Apresentação -->
+        <button class="botao accordion" onclick="abrir_Apresentacao()"><i class="fas fa-arrow-down"></i></button>
+        <div class="oculto">
+
+            <section id="apresentacao" class="animation_Apresentacao">
+                <h2 id="apresentH2">Apresentação</h2>
+                <div class="flex">
+                    <div style="margin-right: 30px;">
+                        <p class="justify pApresentacao" id="pApresent_0">Meu nome é Diego, gosto bastante de programar e praticar esportes. Este será um site voltado para a minha experiência com JavaScript aplicados em exercícios interativos. Meu objetivo é justamente aprimorar minhas habilidades na programação front-end e assim poder criar cada vez mais sites de forma rápida e extremamente eficiênte.</p>
+                        <p class="justify pApresentacao"  id="pApresent_1">Gostaria de seu apoio avaliando esse site e desejo que tenha uma ótima experiência nele. Vou ficando por aqui, aproveite! &#x1F609;</p>
+                    </div>
+            
+                    <div>
+                        <img id="fotodeperfil" src="fotodeperfil.png" alt="foto de perfil">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!--Fim da Aba de Apresentação-->
+
+        <a href="Meu Site.zip" download="Site.zip"  type="application/zip" id="baixarCodigo">Baixar Código</a>
+
+        <div id="PaideTodosdoDia">
+            <section id="divDoDia_Pai">
+                <p style="margin: 7px; color: #2275b1">Você acessou esse site às:</p>
+                <div>
+                <p class="pDoDia" id="horario">
+                    9 horas e 52 minutos
+                </p>
+                </div>
+
+                <img id="imgDoDia">
+                
+                <p class="pDoDia" id="bomdia" style="margin-top: 3px;">Tenha um Bom Dia!</p>
+            </section>
+        </div>
+
+        <!-- Fim dos Balões Flutuantes -->
+    </div>
+
+
+
+    <section id="inicio" class="flex">
+    <!-- Section Principal -->
+        <div>
+        <!-- Setor Esquerdo -->
+            <!-- Exemplo Linha 1 -->
+            <div id="pai_SetorEsquerdo">
+                <div class="flex">
+                    <!-- Div pai do 1-2 na horizontal -->
+                    <div class="flex conteudo_Esquerdo">
+                        <div>
+                            <h2>Nome e Idade</h2>
+                            <p>
+                                Digite seu nome:
+                                <input type="text" id="nomet1">
+                            </p>
+                            <p>
+                                Digite sua idade:
+                                <input type="number" id="idadet1">
+                            </p>
+                    
+                            <p>
+                                Sexo:
+                                <input type="radio" name="check" id="masc">
+                                <label for="masc">Masculino</label>
+                                <input type="radio" name="check" id="femi">
+                                <label for="femi">Feminino</label>
+                            </p>
+                    
+                            <input type="button" id="interagir1" class="botao" value="Interagir" onclick="f1()">
+                            <p id="res">Esperando Interação...</p>
+                        </div>
+                        <div id="nomeIdade_img">
+                        </div>
+                    </div>
+
+                    <div class="conteudo_Direito">
+                        <h2>Fatorial de Um Número</h2>
+                        <p>
+                            Digite um número:
+                            <input type="number" id="num_Fatorial">
+                        </p>
+                        <input type="button" class="botao" value="Interagir" onclick="f4()">
+                        <p id="f4_res">Esperando Interação...</p>
+                    </div>
+                </div>
+                <br>
+
+                <!-- Exemplo Linha 2 -->
+                <div class="flex">
+                <!-- Div pai da linha 2 na horizontal -->
+                    <div class="conteudo_Esquerdo">
+                        <h2>Operadores Aritméticos</h2>
+                        <div class="flex">
+                            <div>
+                                <p>Digite o primeiro número:</p>
+                                <p>Digite um sinal aritmético:</p>
+                                <p>Digite o segundo número:</p>
+                            </div>
+                            <div class="operadores_Caixas">
+                                <input class="oper_Caixas" type="number" id="f2num1">
+                                <input class="oper_Caixas" type="text" id="f2sinal">
+                                <input class="oper_Caixas" type="number"  id="f2num2">
+                            </div>
+                        </div>
+                        <input type="button" class="botao" value="Interagir" onclick="f2()">
+                        <p id="f2res">Esperando Interação...</p>
+                    </div>
+
+                    <div class="conteudo_Direito">
+                        <h2>Animais</h2>
+                        <p>Selecione um animal: </p>
+                        <div id="tabela_Animais">
+                            <div class="conjuntoAnimais">
+                                <input type="image" src="animais/cobra.jpg" alt="Cobra" id="cobra" class="animais" onclick="f5()">
+                                <input type="image" src="animais/macaco.jpg" alt="Macaco" id="macaco" class="animais" onclick="f5()">
+                                <input type="image" src="animais/galinha.jpg" alt="Galinha" id="galinha" class="animais" onclick="f5()">
+                            </div>
+                            <div class="conjuntoAnimais">
+                                <input type="image" src="animais/golfinho.jpg" alt="Golfinho" id="golfinho" class="animais" onclick="f5()">
+                                <input type="image" src="animais/cachorro.jpg" alt="Cachorro" id="cachorro" class="animais" onclick="f5()">
+                                <input type="image" src="animais/cavalo.jpg" alt="Cavalo" id="cavalo" class="animais" onclick="f5()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <!-- Exemplo Linha 3 -->
+                <div class="conteudo_Esquerdo">
+                    <h2>Gerador de Tabuada</h2>
+                    <div class="flex">
+                        <div>
+                            <p>Digite um número:</p>
+                            <p>Casas da tabuada:</p>
+                        </div>
+                        <div class="operadores_Caixas">
+                            <input type="number" class="oper_Caixas" id="f3_n1">
+                            <input type="number" class="oper_Caixas" id="f3_vezesMulti">
+                        </div>
+                    </div>
+                    <input type="button" class="botao" value="Interagir" onclick="f3()">
+                    <p id="f3res">Esperando Interação...
+                        <div>
+                            <select name="tabuada" id="sel_tab" size="10" disabled>
+                                <div>
+                                </div>
+                            </select>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+            <!-- Fim do Setor Esquerdo -->
+
+            <!-- Setor Direito -->
+    </section>
+
+    <!-- Fim do Site -->
+    <footer>
+        <p>&copy;Diego Marcelo Sousa Silva</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/104671ef8a.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script> 
+</body>
+</html>

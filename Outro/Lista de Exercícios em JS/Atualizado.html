@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios 1</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    
+
+    <style>
+        body{
+            background-color: rgba(255, 153, 0, 0.788);
+            font: normal 15px Arial;
+        }
+        h1{
+            text-align: center; 
+            font-family: 'Redressed', cursive;
+            font-size: xx-large;
+        }
+        input{
+            margin: 5px;
+        }
+        section{
+            margin: auto;
+            background-color: white;
+            padding: 15px;
+            width: 500px;
+            border-radius: 15px;
+            box-shadow: 2px 1px 1px 0.5px rgba(0, 0, 0, 0.63);
+        }
+        footer{
+            margin: 10px;
+            font: italic 15pt Arial;
+            text-align: center;
+        }
+        .ativar{
+            cursor: pointer;
+            border: 1.5px solid;
+            box-shadow: 1px 0px 0px 0.5px rgba(0, 0, 0, 0.63);
+        }
+        #txtSinal{
+            width: 30px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="PaideTodos">
+
+    <section>
+        <h1>Terceiro Antecessor de um Número</h1>
+        <p>
+            Digite um número:
+            <input type="number" id="tn1"/>
+        </p>
+        <input type="button" value="Calcular Antecessor" id="botao" class="ativar" onclick="antecessor()"/>
+        <div id="resultado"></div>
+    </section>
+
+</br>
+    
+    <section>
+        <div>
+            <h1>Área de um Triângulo</h1>
+            <p>Digite o valor da base:
+            <input type="number" id="base" />
+            </p>
+            
+            <p>Digite a altura:
+            <input type="number" id="altura" />
+            <input type="button" value="Calcular Área" id="botao2" class="ativar" onclick="areatriangulo()"/>
+            </p>
+        </div>
+        <div id="resultado2"></div>
+    </section>
+
+</br>
+
+    <section>
+        <div>
+            <h1>Notas de Um Aluno</h1>
+            <p>
+                Digite a primeira nota do aluno:
+                <input type="number" id="txt1">
+            </p>
+            <p>
+                Digite a segunda nota do aluno:
+                <input type="number" id="txt2">
+            </p>
+            <p>
+                <input type="button" value="Calcular Média" id="txtMedia" class="ativar" onclick="mediaAluno()">
+                <div id="medAqui"></div>
+                <div id="aprov"></div>
+            </p>
+        </div>
+    </section>
+
+</br>
+
+    <section>
+        <div>
+            <h1>Calculadora Simples</h1>
+            <p>
+                Digite o primeiro número:
+                <input type="number" id="txtn1">
+            </p>
+            <p>
+                Digite o Operador (utilize +, -, *, /)
+                <input type="text" id="txtSinal">
+            </p>
+            <p>
+                Digite o segundo número:
+                <input type="text" id="txtn2">
+            </p>
+            <input type="button" value="Calcular" id="calcSimples" class="ativar" onclick="Calculadora()">
+            <div id="calcResultado"></div>
+        </div>
+    </section>
+
+</br>
+
+    <section>
+        <div>
+            <h1>Fatorial de Um Número</h1>
+            <p>
+                Digite um número:
+                <input type="number" id="txtdn1">
+            </p>
+            <input type="button" value="Calcular Fatorial" id="calcFatorial" class="ativar" onclick="Fatorial()">
+            <div id="fatorResult"></div>
+        </div>
+    </section>
+
+    </div>
+    
+
+    <footer>&copy;Diego Marcelo</footer>
+
+    <script>
+
+        function antecessor() {
+            var an1 = document.getElementById("tn1")
+            var n1 = Number(an1.value)
+            var menos3 = n1-3
+            resultado.innerHTML = "<strong>O terceiro antecessor é: </strong>" + menos3
+        }
+        
+        function areatriangulo() {
+            var bn1 = document.getElementById("base")
+            var bn2 = document.getElementById("altura")
+            n1 = Number(bn1.value)
+            n2 = Number(bn2.value)
+            var area = n1*n2/2
+            resultado2.innerHTML = "<strong>A área do triângulo é: </strong>" + area
+        }
+
+        function mediaAluno() {
+            var n1 = Number(document.getElementById("txt1").value)
+            var n2 = Number(document.getElementById("txt2").value)
+            var valMed = (n1+n2)/2
+            var media = document.getElementById("medAqui")
+            var item = ""
+
+            if(valMed < 6){
+                item = "Aluno Reprovado"
+            }else{
+                item = "Aluno Aprovado"
+            }
+            media.innerHTML = "<strong>A média do aluno é: </strong>" + valMed + " || " + item
+        }
+
+        function calculo(n1=0, n2=0){
+            if(sinal == "+"){
+                return n1+n2
+            }else if(sinal == "-"){
+                return n1-n2
+            }else if(sinal == "*"){
+                return n1*n2
+            }else if(sinal == "/"){
+                return n1/n2
+            }else{
+                return "Sinal Inválido"
+            }
+        }
+
+        function Calculadora(){
+            var cn1 = Number(document.getElementById("txtn1").value)
+            var cn2 = Number(document.getElementById("txtn2").value)
+            var resul = document.getElementById("calcResultado")
+            var sinal = document.getElementById("txtSinal").value
+
+            resul.innerHTML = calculo(cn1, cn2)
+        }
+
+        function Fatorial(){
+            var dn1 = Number(document.getElementById("txtdn1").value)
+            var fatResul = document.getElementById("fatorResult")
+
+            function fatoriando(f){
+                var fatoriado = f
+                for(d = 1; d < f; d++){
+                    fatoriado = fatoriado * (f-d)
+                }
+                return fatoriado
+            }
+
+            fatResul.innerHTML = fatoriando(dn1)
+        }
+
+    </script>
+</body>
+</html>

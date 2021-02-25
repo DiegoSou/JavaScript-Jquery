@@ -1,0 +1,83 @@
+h2#apresentH2{
+    text-align: left;
+    font-size: 120%;
+    color: #2275b188;
+    margin: 7px;
+    margin-bottom: 0;
+}
+
+
+div#PaideTodos{
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+}
+
+@keyframes abrindo{
+    0%{
+        max-height: 0px;
+        opacity: 0.4;
+    }
+    100%{
+        max-height: 228.800px;
+        opacity: 1;
+    }
+}
+
+@keyframes fechando{
+    0%{
+        max-height: 228.800px;
+        opacity: 1;
+    }
+    100%{
+        max-height: 0;
+        opacity: 0.4;
+    }
+}
+
+section#apresentacao{
+    font: normal 15px Arial;
+    top: 35px;
+    right: 0;
+    height: fit-content;
+    position: fixed;
+    box-shadow: 0.5px 0.5px 5px #000000a8;
+    border-radius: 30px 0 0 30px; 
+    overflow: hidden;
+}
+
+.animation_Apresentacao{
+    animation: 0.5s abrindo ease-in-out;
+    animation-direction: normal;
+}
+
+.accordion{
+    position: fixed;
+    width: 173px;
+    height: 35px;
+    color: black;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 0px 0px 0px 8px;
+    background-color: #ffb700;
+    box-shadow: -1px 1px 3px #bd8d12ad;
+    border: solid 0.1px #bb8600;
+    transition: 1s;
+    outline: none;
+}
+
+.ativador_Acordeao{
+    opacity: 0.7;
+}
+
+.oculto{
+    display: none;
+    overflow: hidden;
+}
+
+img#fotodeperfil{
+    animation: none;
+}

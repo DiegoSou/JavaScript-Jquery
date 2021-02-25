@@ -1,0 +1,200 @@
+/* Estilos Base */
+body{
+    font: normal 15px Arial;
+    background-image: linear-gradient(125deg, #2275b1af, #0082aaa8, #1684a5a8);
+    background-attachment: fixed;
+    text-align: center;
+    animation: 2s opacidade;
+}
+
+@keyframes opacidade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+section{
+    background-color: white;
+    height: fit-content;
+    width: 600px;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px 0px #006786a8;
+}
+
+footer{
+    font-style: italic;
+}
+
+p{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1{
+    font-family: 'Roboto Slab', serif;
+    color: #FA9734;
+    text-shadow: 1px 1px 2px #693f14;
+    margin: 19px auto 19px auto;
+}
+
+h2{
+    font-family: 'Mitr', sans-serif;
+    text-align: left;
+    color: #FA9734;
+    margin: 4px;
+    margin-bottom: 8px; 
+}
+
+input{
+    border-radius: 4px;
+    border: solid 0.5;
+    border-style: ridge;
+    border-color: rgba(36, 36, 36, 0.623);
+    margin-left: 1px;
+}
+
+img{
+    animation: 2s opacidade;
+}
+
+section#inicio{
+    width: 900px;
+    margin: auto;
+    text-align: justify;
+}
+
+div.conteudo_Esquerdo{
+    width: 450px;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+div.conteudo_Direito{
+    width: 425px;
+    margin-left: 18px;
+}
+
+/* Nome e Idade */
+div#nomeIdade_img{
+    margin-left: 20px;
+    display: flex;
+}
+
+img#imgNomeIdade{
+    margin: auto;
+}
+
+/* Classe Gerais */
+.justify{
+    text-align: justify;
+}
+
+.flex{
+    display: flex;
+}
+
+.botao{
+    background-color: #ffb700b9;
+    width: 265px;
+    height: 23px;
+    border-radius: 4px;
+    border: transparent;
+    box-shadow: 1px 1px 1px #bd8c12a2;
+    border: solid 0.1px #815d00b9;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Alinhamento Vertical das Caixas */
+div.operadores_Caixas{
+    display: grid;
+    margin: 4px;
+    align-content: space-evenly;
+}
+
+.oper_Caixas{
+    align-content: space-between;
+    margin: auto;
+}
+
+/* Gerador Tabuada */
+select#sel_tab{
+    width: 200px;
+    border-radius: 8px 1px 1px 8px;
+    border: solid 2px;
+    border-style: ridge;
+    border-color: rgba(36, 36, 36, 0.733);
+    transform: rotateY(180deg);
+    display: none;
+    opacity: 1;
+    animation: 2s opacidade;
+}
+
+option{
+    transform: rotateY(180deg);
+    color: unset;
+    color: rgb(36, 36, 36);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+}
+
+
+/* Animais */
+.animais{
+    cursor: pointer;
+    margin: 1px;
+    border: 0.4px solid rgba(36, 36, 36, 0.733);
+    width: 100px;
+    height: 80px;
+}
+#cobra{
+    transform-origin: top left;
+}
+#macaco{
+    transform-origin: top center;
+}
+#galinha{
+    transform-origin: top right;
+}
+#golfinho{
+    transform-origin: bottom left;
+}
+#cachorro{
+    transform-origin: bottom center;
+}
+#cavalo{
+    transform-origin: bottom right;
+}
+
+div#tabela_Animais{
+    width: fit-content;
+    height: fit-content;
+    border: solid 2px;
+    border-radius: 5px;
+    border-style: ridge;
+    border-color: rgba(36, 36, 36, 0.733);
+}
+
+div.conjuntoAnimais{
+    display: table;
+    line-height: 0;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+}
+
+.aumentada{
+    position: relative;
+    transition: all 1s;
+    transform: scale(2.00);
+    width: 158px;
+    height: 75px;
+}
+
+.absoluta{
+    position: absolute;
+}
